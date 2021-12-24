@@ -1,0 +1,864 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  background: #131313;
+  /* background: #010101; */
+}
+
+
+/* .....................................preloader........................... */
+#loading{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #fff
+	url('./assets/Pinwheel.gif')
+	 no-repeat center center;	
+	z-index: 99999;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 110px;
+}
+
+
+/* .......................................scrollbar............................... */
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255,255, 255, 0); 
+  box-shadow: inset 0 0 5px grey; 
+}
+::-webkit-scrollbar-thumb {
+  background: #ede8a9;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* ........................................social. ........................... */
+
+.icon-bar {
+  position: fixed;
+  z-index: 10;
+  border-radius: 5px;
+  top: 50%;
+  background: #0277bd;
+  transform: translateY(-50%);
+  /* box-shadow: 0 5px 20px rgba(2, 119, 189, 0.5); */
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: #000;
+  font-size: 20px;
+}
+.icon-bar a i {
+  color: #000;
+}
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+/* .......................nav bar............................................. */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+.logo img {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.navigation li {
+  list-style-type: none;
+  display: inline-block;
+}
+.navigation li a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: #fff;
+}
+.sticky .logo {
+
+  transition: 0.3s;
+
+}
+.sticky {
+  background: #0277bd;
+  transition: 0.3;
+  /* box-shadow: 0 5px 20px rgba(2, 119, 189, 0.5); */
+}
+
+section {
+  padding: 100px;
+}
+.banner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url("/assets/bg.png") no-repeat center center / cover;
+  /* filter: invert(100%); */
+}
+
+.info-name {
+  width: 100%;
+  position: relative;
+  height: 90vh;
+  display: flex;
+  padding-left: 30px;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+h1 {
+  position: relative;
+  font-size: 5.5vw;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 3px #ede8a9;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+h1:before {
+  content: attr(data-text);
+  /* content: "yash kumar"; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ede8a9;
+  -webkit-text-stroke: 0vw #ede8a9;
+  border-right: 2px solid #ede8a9;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70% {
+    width: 100%;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 4.5vw;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px #ede8a9;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-family: "Satisfy", cursive;
+  margin-bottom: 50px;
+}
+
+h3,
+p {
+  color: #48455a;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+/* ............................container........................ */
+
+.container {
+  width: 90%;
+  max-width: 120rem;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.contactform {
+  display: flex;
+  flex-direction: column;
+}
+/* ............................about me......................... */
+
+.about {
+  width: 100%;
+  min-height: 100vh;
+}
+.info-pic {
+  width: 300px;
+  height: 300px;
+  margin-right: 50px;
+}
+.info-pic img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 5%;
+}
+
+.info-text {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  /* align-items: center; */
+}
+.info-text button {
+  height: 50px;
+  width: 200px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin: 30px auto;
+  /* border: 1px solid black; */
+  transition: 0.5s;
+  background-color: rgb(226, 223, 223);
+}
+.info-text button:hover {
+  background: #0277bd;
+  color: #fff;
+  letter-spacing: 3px;
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(2, 119, 189, 0.5);
+}
+button i {
+  margin-right: 10px;
+}
+.info-text p {
+  color: #fff;
+  padding: 20px;
+  margin-left: auto;
+}
+
+/* ............................skills........................... */
+.skills {
+  width: 100%;
+}
+.skills-row {
+  display: flex;
+  width: 100%;
+  max-width: 1199px;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card-boundary {
+  width: 163px;
+  height: 163px;
+}
+.skills-row .card {
+  width: 160px;
+  height: 160px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background: #d4495d; */
+  background: rgb(226, 223, 223);
+  border-radius: 8px;
+  text-align: center;
+
+  transition: all linear 0.3s;
+  /* box-shadow: 0px 0px 35px 0px #292828; */
+}
+
+.skills-row .card:hover {
+  transform: scale(1.05);
+  /* background: #d4495d; */
+  background: #fa3c00;
+  box-shadow: 0 5px 20px rgba(250, 60, 0, 0.5);
+}
+.skills-logo {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0px auto 20px;
+  transition: all linear 0.3s;
+  vertical-align: middle;
+}
+.skills-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  transition: all linear 0.3s;
+}
+
+.skills-name {
+  border-top: 1px solid #969292;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills-name p {
+  color: #48455a;
+  text-transform: uppercase;
+  position: relative;
+  top: 50%;
+}
+.skills-row .card:hover .skills-logo {
+  background: rgb(226, 223, 223);
+}
+.skills-row .card:hover .skills-logo img {
+  transform: scale(0.6);
+}
+.skills-row .card:hover .skills-name {
+  border-top: 1px solid #141212;
+}
+.skills-row .card:hover p {
+  color: #fff;
+}
+
+/* ..................................projects........................... */
+
+.projects {
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.project-row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.project-card {
+  position: relative;
+  max-width: 300px;
+  align-items: center;
+  height: 265px;
+  background: rgb(226, 223, 223);
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  /* text-overflow: ; */
+}
+.project-card:hover {
+  height: 480px;
+  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5);
+}
+.projectlink img {
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.project-img {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+.project-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.project-text {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.project-text h3, .project-text p {
+  color: #48455a;
+  margin: 15px auto;
+}
+
+.project-card:hover .project-text {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.2s;
+}
+
+/* ....................................timeline........................... */
+
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline-container::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: rgb(226, 223, 223);
+
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timecontainer {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timecontainer::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #ff9f55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0px 5px 20px rgb(255 159 85 / 50%);
+}
+
+/* Place the container to the left */
+.timeleft {
+  left: 0;
+}
+
+/* Place the container to the right */
+.timeright {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.timeleft::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.timeright::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.timeright::after {
+  left: -16px;
+}
+
+/* The actual content */
+.timeline-content {
+  padding: 20px 30px;
+  /* background-color: rgb(226, 223, 223); */
+  background-color: rgb(226, 223, 223);
+  position: relative;
+  border-radius: 6px;
+}
+
+.timehead {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ..................................................contactform................ */
+.contact h2 {
+  margin-bottom: 0px;
+}
+.contact p {
+  color: #fff;
+  text-align: center;
+}
+
+.contactgif {
+  width: 400px;
+  height: auto;
+}
+.contactgif img {
+  position: relative;
+  width: 100%;
+}
+.contactform {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contact-text p,
+.contact-text i {
+  color: #fff;
+}
+.contact p {
+  margin-bottom: 40px;
+}
+.contact-text i {
+  font-size: 3rem;
+  transition: 0.3s;
+}
+.contact-text i:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  background-image: linear-gradient(42deg, #e7e07d, #95a6fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* .......................................t-rex.............................. */
+
+.t-rex {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.t-rex img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  animation: rex 13s infinite ease-in-out;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+@keyframes rex {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+/* .........................................go to top............................. */
+
+.gototop{
+  position: fixed;
+  bottom: 25px;
+  right: 10px;
+height: 60px;
+width: 60px;
+}
+.gototop img
+{
+  width: 100%;
+  height: 100%;
+}
+
+/* ...................................footer.................................. */
+
+footer {
+  width: 100%;
+  height: 49px;
+  background: #0277bd;
+  /* background: rgb(171 70 187); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  color: #fff;
+}
+
+/* ................................media query of timeline................................ */
+
+@media (max-width: 1024px) {
+  section {
+    padding: 50px;
+  }
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 605px) {
+  /* Place the timelime to the left */
+  .timeline-container::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .timecontainer {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .timecontainer::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .timeleft::after,
+  .timeright::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .timeright {
+    left: 0%;
+  }
+}
+@media (max-width: 768px) {
+  .info-pic {
+    height: 250px;
+  }
+  .timehead {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .timehead span {
+    width: 100%;
+    display: block;
+    align-items: center;
+  }
+}
+@media (max-width: 720px) {
+  h2 {
+    font-size: 9vw;
+  }
+  h1 {
+    -webkit-text-stroke: 1px #ede8a9;}
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-pic {
+    height: 350px;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  .info-text {
+    width: 400px;
+  }
+  .contactgif img {
+    margin-bottom: 50px;
+  }
+  .menuToggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url("assets/menu.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+    transition: 0.2s;
+  }
+  nav .navigation {
+    display: none;
+  }
+  nav .navigation li {
+    margin: 10px;
+  }
+  nav .navigation.active {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #0277bd;
+  }
+  nav .navigation li a {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+  .menuToggle.active {
+    background: url("assets/close.png");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.2s;
+  }
+  .gototop{
+  height: 50px;
+  width: 50px;
+  }
+}
+
+@media (max-width: 505px) {
+  nav .navigation.active {
+    top: 40px;
+  }
+  .contactform {
+    width: 290px;
+  }
+  .contactgif {
+    width: 275px;
+  }
+  .info-text {
+    width: 350px;
+  }
+  .info-pic {
+    width: 255px;
+    height: 299px;
+  }
+  .logo img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  .gototop{
+  height: 40px;
+  width: 40px;
+  }
+}
+
+@media (max-width: 425px) {
+  h1 {
+    position: relative;
+    font-size: 9.5vw;
+  }
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+  .icon-bar a {
+    padding: 8px;
+  }
+  .info-text {
+    width: 300px;
+  }
+  .t-rex {
+    height: 42px;
+  }
+  .t-rex img {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+}
+
+@media (max-width: 423px) {
+  nav .navigation.active {
+    top: 40px;
+  }
+  .timeline-content {
+    padding: 20px 12px;
+  }
+  .info-pic {
+    width: 220px;
+    height: 250px;
+  }
+  .info-text {
+    width: 300px;
+  }
+  .timeline-content {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contactgif {
+    width: 260px;
+  }
+  .contactform {
+    width: 240px;
+}
+  .info-name {
+    padding-left: 0px;
+  }
+  .t-rex {
+    height: 35px;
+  }
+  .t-rex img {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+}
+}
+
+@media (max-width: 320px) {
+  .info-text {
+    width: 260px;
+  }
+  .info-text button {
+    width: 180px;
+  }
+  .project-card {
+    width: 220px;
+    height: 188px;
+  }
+  .project-img {
+    width: 200px;
+  }
+  .project-card:hover {
+    height: 470px;
+  }
+  .contactgif {
+    width: 216px;
+  }
+}
