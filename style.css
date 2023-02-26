@@ -283,11 +283,12 @@ button i {
 }
 .skills-row .card {
   width: 160px;
-  height: 160px;
+  height: 180px;
   margin: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-evenly;
   /* background: #d4495d; */
   background: rgb(226, 223, 223);
   border-radius: 8px;
@@ -308,7 +309,8 @@ button i {
   height: 60px;
   text-align: center;
   border-radius: 50%;
-  margin: 0px auto 20px;
+  /* margin: 0px auto 20px; */
+  margin: 0 auto;
   transition: all linear 0.3s;
   vertical-align: middle;
 }
@@ -331,6 +333,7 @@ button i {
   text-transform: uppercase;
   position: relative;
   top: 50%;
+  font-size: 14px;
 }
 .skills-row .card:hover .skills-logo {
   background: rgb(226, 223, 223);
@@ -437,7 +440,7 @@ button i {
   position: absolute;
   width: 6px;
   background-color: rgb(226, 223, 223);
-
+z-index: -1;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -605,6 +608,10 @@ img {
   right: 10px;
 height: 60px;
 width: 60px;
+display: none;
+}
+.gototop-show{
+  display: block;
 }
 .gototop img
 {
